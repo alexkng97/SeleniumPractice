@@ -21,6 +21,10 @@ public abstract class Page {
 		return logo;
 	}
 
+	public void clickLogo(){
+		webDriver.findElement(logo).click();
+	}
+
 	public String getURL(){
 		return webDriver.getCurrentUrl();
 	}

@@ -2,9 +2,9 @@ package org.example.pom;
 
 import org.openqa.selenium.WebDriver;
 
-public class Home extends Page{
+public class HomePage extends Page{
 
-	public Home(WebDriver webDriver) {
+	public HomePage(WebDriver webDriver) {
 		super(webDriver);
 	}
 
