@@ -1,17 +1,11 @@
-package org.example.pomtest;
-
-
-import org.example.pom.HomePage;
+package org.example.toolsqa.pomtest;
+import org.example.toolsqa.pom.HomePage;
+import org.example.toolsqa.pom.WebDriverFactory;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-
-import java.util.List;
 
 public class HomeTest {
 	WebDriver webDriver;
@@ -20,13 +14,17 @@ public class HomeTest {
 	@BeforeEach
 	void setup(){
 		boolean headless = true;
-		if(headless) {
-			ChromeOptions chromeOptions = new ChromeOptions();
-			chromeOptions.addArguments("headless");
-			webDriver = new ChromeDriver(chromeOptions);
-		}else {
-			webDriver = new ChromeDriver();
-		}
+
+//		if(headless) {
+//			ChromeOptions chromeOptions = new ChromeOptions();
+//			chromeOptions.addArguments("headless");
+//			webDriver = new ChromeDriver(chromeOptions);
+//		}else {
+//			webDriver = new ChromeDriver();
+//		}
+//
+
+		webDriver = WebDriverFactory.getWebDriver("firefox");
 		homePage = new HomePage(webDriver);
 		webDriver.get(homePage.getBASE_URL());
 
