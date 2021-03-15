@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.openqa.selenium.WebDriver;
 
 public class HomeTest {
@@ -13,18 +14,7 @@ public class HomeTest {
 
 	@BeforeEach
 	void setup(){
-		boolean headless = true;
-
-//		if(headless) {
-//			ChromeOptions chromeOptions = new ChromeOptions();
-//			chromeOptions.addArguments("headless");
-//			webDriver = new ChromeDriver(chromeOptions);
-//		}else {
-//			webDriver = new ChromeDriver();
-//		}
-//
-
-		webDriver = WebDriverFactory.getWebDriver("firefox");
+		webDriver = WebDriverFactory.getWebDriver("firefox", true);
 		homePage = new HomePage(webDriver);
 		webDriver.get(homePage.getBASE_URL());
 
@@ -41,7 +31,13 @@ public class HomeTest {
 	@Test
 	@DisplayName("Initial cards getter")
 	void initialCardsGetter() {
-		homePage.getCategory("Elements");
+		homePage.clickCategory("Elements");
+		Assertions.assertEquals("https://demoqa.com/elements", homePage.getURL());
+	}
+
+	@ParameterizedTest
+	@Test
+	void testAllCategories(){
 
 	}
 }

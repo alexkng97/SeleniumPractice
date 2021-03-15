@@ -9,8 +9,6 @@ import java.util.List;
 
 public class HomePage extends Page {
 
-	List<WebElement> cards = new ArrayList<>();
-
 	public HomePage(WebDriver webDriver) {
 		super(webDriver);
 	}
@@ -27,10 +25,14 @@ public class HomePage extends Page {
 			}
 		}
 
-		WebElement selected = allCategories.findElement(By.cssSelector("div:nth-child(" + index + ")" ));
+		WebElement selected = webDriver.findElement(By.cssSelector(".card:nth-child(" + index + ") svg" ));
 		System.out.println(selected.getText());
 		return selected;
 
+	}
+
+	public void clickCategory(String category){
+		getCategory(category).click();
 	}
 
 
