@@ -35,9 +35,4 @@ public class HomeTest {
 		Assertions.assertEquals("https://demoqa.com/elements", homePage.getURL());
 	}
 
-	@ParameterizedTest
-	@Test
-	void testAllCategories(){
-
-	}
 }
