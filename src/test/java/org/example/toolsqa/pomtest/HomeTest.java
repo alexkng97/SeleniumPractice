@@ -34,5 +34,5 @@ public class HomeTest {
 		homePage.clickCategory("Elements");
 		Assertions.assertEquals("https://demoqa.com/elements", homePage.getURL());
 	}
-//test
+
 }
