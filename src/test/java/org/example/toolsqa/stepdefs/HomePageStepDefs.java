@@ -28,5 +28,6 @@ public class HomePageStepDefs {
     @Then("I should be directed to {string}")
     public void iShouldBeDirectedTo(String url) {
         Assertions.assertEquals(url, homePage.getURL());
+        webDriver.close();
     }
 }

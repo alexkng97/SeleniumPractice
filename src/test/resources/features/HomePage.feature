@@ -7,3 +7,7 @@ Feature: Testing homepage functionality
    Examples:
    |category|url|
    |Elements|https://demoqa.com/elements|
+   |Forms   |https://demoqa.com/forms   |
+   |Alerts, Frame & Windows|https://demoqa.com/alertsWindows|
+   |Widgets                |https://demoqa.com/widgets      |
+   |Interactions           |https://demoqa.com/interaction  |
