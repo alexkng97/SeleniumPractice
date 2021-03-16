@@ -30,4 +30,15 @@ public class HomePageStepDefs {
         Assertions.assertEquals(url, homePage.getURL());
         webDriver.close();
     }
+
+    @When("I click on the logo")
+    public void iClickOnTheLogo() {
+        homePage.clickLogo();
+    }
+
+    @Then("I should be directed to the homepage")
+    public void iShouldBeDirectedToTheHomepage() {
+        Assertions.assertEquals(homePage.getBASE_URL(),homePage.getURL());
+        webDriver.close();
+    }
 }
