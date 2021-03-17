@@ -41,4 +41,27 @@ public abstract class Subpage extends Page {
         getAlertsHeader().click();
     }
 
+    public WebElement getWidgetsHeader(){
+        return webDriver.findElement(widgetsHeader);
+    }
+
+    public void clickWidgetsHeader(){
+        getWidgetsHeader().click();
+    }
+
+    public WebElement getInteractionsHeader(){
+        return webDriver.findElement(interactionsHeader);
+    }
+
+    public void clickInteractionsHeader(){
+        getInteractionsHeader().click();
+    }
+
+    public WebElement getBookStoreHeader(){
+        return webDriver.findElement(bookStoreHeader);
+    }
+
+    public void clickBookStoreHeader(){
+        getBookStoreHeader().click();
+    }
 }

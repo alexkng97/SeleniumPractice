@@ -45,5 +45,33 @@ public class SubpageTest {
 
     }
 
+    @Test
+    @DisplayName("Widgets press")
+    void widgetsPress() {
+        //demoqa.com/elements starts off with elements header already selected -> cannot click forms header
+        elementsPage.clickElementsHeader();
+        elementsPage.clickWidgetsHeader();
+
+    }
+
+    @Test
+    @DisplayName("Interactions press")
+    void interactionsPress() {
+        //demoqa.com/elements starts off with elements header already selected -> cannot click forms header
+        elementsPage.clickElementsHeader();
+        elementsPage.clickInteractionsHeader();
+
+    }
+
+    @Test
+    @DisplayName("Book store press")
+    void bookStorePress() {
+        //demoqa.com/elements starts off with elements header already selected -> cannot click forms header
+        elementsPage.clickElementsHeader();
+        elementsPage.clickBookStoreHeader();
+
+    }
+
+
 
 }
