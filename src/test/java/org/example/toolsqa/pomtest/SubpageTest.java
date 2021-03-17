@@ -23,7 +23,7 @@ public class SubpageTest {
     @Test
     @DisplayName("Elements press")
     void elementsPress() {
-        elementsPage.clickElements();
+        elementsPage.clickElementsHeader();
 
     }
 
@@ -31,8 +31,17 @@ public class SubpageTest {
     @DisplayName("Forms press")
     void formsPress() {
         //demoqa.com/elements starts off with elements header already selected -> cannot click forms header
-        elementsPage.clickElements();
-        elementsPage.clickForms();
+        elementsPage.clickElementsHeader();
+        elementsPage.clickFormsHeader();
+
+    }
+
+    @Test
+    @DisplayName("Alerts press")
+    void alertsPress() {
+        //demoqa.com/elements starts off with elements header already selected -> cannot click forms header
+        elementsPage.clickElementsHeader();
+        elementsPage.clickAlertsHeader();
 
     }
 

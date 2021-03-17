@@ -6,28 +6,39 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public abstract class Subpage extends Page {
-    By elements = By.cssSelector(".element-group:nth-child(1) .header-wrapper");
-    By forms = By.cssSelector(".element-group:nth-child(2) .header-wrapper");
+    By elementsHeader = By.cssSelector(".element-group:nth-child(1) .header-wrapper");
+    By formsHeader = By.cssSelector(".element-group:nth-child(2) .header-wrapper");
+    By alertsHeader = By.cssSelector(".element-group:nth-child(3) .header-wrapper");
+    By widgetsHeader = By.cssSelector(".element-group:nth-child(4) .header-wrapper");
+    By interactionsHeader = By.cssSelector(".element-group:nth-child(5) .header-wrapper");
+    By bookStoreHeader = By.cssSelector(".element-group:nth-child(6) .header-wrapper");
 
     public Subpage(WebDriver webDriver) {
         super(webDriver);
     }
 
-    public WebElement getElements(){
-        return webDriver.findElement(elements);
+    public WebElement getElementsHeader(){
+        return webDriver.findElement(elementsHeader);
     }
 
-    public void clickElements(){
-        getElements().click();
+    public void clickElementsHeader(){
+        getElementsHeader().click();
     }
 
-    public WebElement getForms(){
-        return webDriver.findElement(forms);
+    public WebElement getFormsHeader(){
+        return webDriver.findElement(formsHeader);
     }
 
-    public void clickForms(){
-        getForms().click();
+    public void clickFormsHeader(){
+        getFormsHeader().click();
     }
 
+    public WebElement getAlertsHeader(){
+        return webDriver.findElement(alertsHeader);
+    }
+
+    public void clickAlertsHeader(){
+        getAlertsHeader().click();
+    }
 
 }
