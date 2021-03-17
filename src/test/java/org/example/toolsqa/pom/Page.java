@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public abstract class Page {
 
-	WebDriver webDriver;
+	public WebDriver webDriver;
 	private String BASE_URL = "https://demoqa.com/";
 	private By logo = By.cssSelector("#app > header > a > img");
 
