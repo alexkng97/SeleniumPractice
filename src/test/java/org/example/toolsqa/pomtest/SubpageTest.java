@@ -2,7 +2,6 @@ package org.example.toolsqa.pomtest;
 
 import org.example.toolsqa.pom.WebDriverFactory;
 import org.example.toolsqa.pom.subpage.ElementsPage;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -27,5 +26,15 @@ public class SubpageTest {
         elementsPage.clickElements();
 
     }
+
+    @Test
+    @DisplayName("Forms press")
+    void formsPress() {
+        //demoqa.com/elements starts off with elements header already selected -> cannot click forms header
+        elementsPage.clickElements();
+        elementsPage.clickForms();
+
+    }
+
 
 }
