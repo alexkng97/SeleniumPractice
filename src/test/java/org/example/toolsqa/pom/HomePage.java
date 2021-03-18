@@ -9,32 +9,55 @@ import java.util.List;
 
 public class HomePage extends Page {
 
+	By elementsCategory = By.cssSelector(".card:nth-child(1) svg");
+	By formsCategory = By.cssSelector(".card:nth-child(2) svg");
+	By alertsCategory = By.cssSelector(".card:nth-child(3) svg");
+	By widgetsCategory = By.cssSelector(".card:nth-child(4) svg");
+	By interactionsCategory = By.cssSelector(".card:nth-child(5) svg");
+
 	public HomePage(WebDriver webDriver) {
 		super(webDriver);
 	}
 
-	public WebElement getCategory(String category){
-		WebElement allCategories = webDriver.findElement(By.className("category-cards"));
-
-		String[] individualCategory = allCategories.getText().split("\n");
-		int index = 0;
-		for(int i = 0; i < individualCategory.length; i++){
-			if(individualCategory[i].contains(category)){
-				index = i + 1;
-				break;
-			}
-		}
-
-		WebElement selected = webDriver.findElement(By.cssSelector(".card:nth-child(" + index + ") svg" ));
-		System.out.println(selected.getText());
-		return selected;
-
+	public WebElement getElementsCategory(){
+		return webDriver.findElement(elementsCategory);
 	}
 
-	public void clickCategory(String category){
-		getCategory(category).click();
+	public void clickElementsCategory(){
+		getElementsCategory().click();
 	}
 
+	public WebElement getFormsCategory(){
+		return webDriver.findElement(formsCategory);
+	}
+
+	public void clickFormsCategory(){
+		getFormsCategory().click();
+	}
+
+	public WebElement getAlertsCategory(){
+		return webDriver.findElement(alertsCategory);
+	}
+
+	public void clickAlertsCategory(){
+		getAlertsCategory().click();
+	}
+
+	public WebElement getWidgetsCategory(){
+		return webDriver.findElement(widgetsCategory);
+	}
+
+	public void clickWidgetsCategory(){
+		getWidgetsCategory().click();
+	}
+
+	public WebElement getInteractionsCategory(){
+		return webDriver.findElement(interactionsCategory);
+	}
+
+	public void clickInteractionsCategory(){
+		getInteractionsCategory().click();
+	}
 
 
 }

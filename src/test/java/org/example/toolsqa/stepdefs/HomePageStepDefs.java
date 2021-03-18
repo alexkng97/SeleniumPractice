@@ -22,7 +22,25 @@ public class HomePageStepDefs {
 
     @When("I click on the category {string}")
     public void iClickOnTheCategory(String category) {
-        homePage.clickCategory(category);
+        switch(category){
+            case "Elements":
+                homePage.clickElementsCategory();
+                break;
+            case "Forms":
+                homePage.clickFormsCategory();
+                break;
+            case "Alerts, Frame & Windows":
+                homePage.clickAlertsCategory();
+                break;
+            case "Widgets":
+                homePage.clickWidgetsCategory();
+                break;
+            case "Interactions":
+                homePage.clickInteractionsCategory();
+                break;
+            default:
+                System.out.println("Invalid category name");
+        }
     }
 
     @Then("I should be directed to {string}")

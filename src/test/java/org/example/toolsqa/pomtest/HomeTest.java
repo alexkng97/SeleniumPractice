@@ -30,7 +30,7 @@ public class HomeTest {
 	@Test
 	@DisplayName("Initial cards getter")
 	void initialCardsGetter() {
-		homePage.clickCategory("Elements");
+		homePage.clickElementsCategory();
 		Assertions.assertEquals("https://demoqa.com/elements", homePage.getURL());
 	}
 
