@@ -13,6 +13,8 @@ public abstract class Subpage extends Page {
     By interactionsHeader = By.cssSelector(".element-group:nth-child(5) .header-wrapper");
     By bookStoreHeader = By.cssSelector(".element-group:nth-child(6) .header-wrapper");
 
+    By textBox = By.id("item-0");
+
     public Subpage(WebDriver webDriver) {
         super(webDriver);
     }
@@ -64,4 +66,13 @@ public abstract class Subpage extends Page {
     public void clickBookStoreHeader(){
         getBookStoreHeader().click();
     }
+
+    public WebElement getTextBox(){
+        return webDriver.findElement(textBox);
+    }
+
+    public void clickTextBox(){
+        getTextBox().click();
+    }
+
 }

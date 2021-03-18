@@ -59,5 +59,4 @@ public class HomePage extends Page {
 		getInteractionsCategory().click();
 	}
 
-
 }

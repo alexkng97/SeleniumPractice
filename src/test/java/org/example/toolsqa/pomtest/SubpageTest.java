@@ -72,6 +72,15 @@ public class SubpageTest {
 
     }
 
+    @Test
+    @DisplayName("Text box subsection")
+    void textBoxSubsection() {
+        //demoqa.com/elements starts off with elements header already selected -> cannot click forms header
+        elementsPage.clickTextBox();
+
+    }
+
+
 
 
 }
