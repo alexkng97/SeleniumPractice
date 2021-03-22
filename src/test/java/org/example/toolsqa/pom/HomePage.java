@@ -1,5 +1,7 @@
 package org.example.toolsqa.pom;
 
+import org.example.toolsqa.pom.subpage.ElementsPage;
+import org.example.toolsqa.pom.subpage.Subpage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,8 +25,9 @@ public class HomePage extends Page {
 		return webDriver.findElement(elementsCategory);
 	}
 
-	public void clickElementsCategory(){
+	public ElementsPage clickElementsCategory(){
 		getElementsCategory().click();
+		return new ElementsPage(webDriver);
 	}
 
 	public WebElement getFormsCategory(){
