@@ -1,13 +1,9 @@
 package org.example.toolsqa.pom;
 
-import org.example.toolsqa.pom.subpage.ElementsPage;
-import org.example.toolsqa.pom.subpage.Subpage;
+import org.example.toolsqa.pom.subpage.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class HomePage extends Page {
 
@@ -34,32 +30,36 @@ public class HomePage extends Page {
 		return webDriver.findElement(formsCategory);
 	}
 
-	public void clickFormsCategory(){
+	public FormsPage clickFormsCategory(){
 		getFormsCategory().click();
+		return new FormsPage(webDriver);
 	}
 
 	public WebElement getAlertsCategory(){
 		return webDriver.findElement(alertsCategory);
 	}
 
-	public void clickAlertsCategory(){
+	public AlertsPage clickAlertsCategory(){
 		getAlertsCategory().click();
+		return new AlertsPage(webDriver);
 	}
 
 	public WebElement getWidgetsCategory(){
 		return webDriver.findElement(widgetsCategory);
 	}
 
-	public void clickWidgetsCategory(){
+	public WidgetsPage clickWidgetsCategory(){
 		getWidgetsCategory().click();
+		return new WidgetsPage(webDriver);
 	}
 
 	public WebElement getInteractionsCategory(){
 		return webDriver.findElement(interactionsCategory);
 	}
 
-	public void clickInteractionsCategory(){
+	public InteractionsPage clickInteractionsCategory(){
 		getInteractionsCategory().click();
+		return new InteractionsPage(webDriver);
 	}
 
 }

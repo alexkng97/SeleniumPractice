@@ -2,7 +2,6 @@ package org.example.toolsqa.pomtest;
 import org.example.toolsqa.pom.HomePage;
 import org.example.toolsqa.pom.WebDriverFactory;
 import org.example.toolsqa.pom.subpage.ElementsPage;
-import org.example.toolsqa.pom.subpage.Subpage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
