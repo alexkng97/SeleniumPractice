@@ -1,6 +1,7 @@
 package org.example.toolsqa.pom;
 
 import org.example.toolsqa.pom.subpage.*;
+import org.example.toolsqa.pom.subpage.elements.ElementsPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
