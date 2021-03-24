@@ -2,10 +2,12 @@ package org.example.toolsqa.pomtest;
 
 import org.example.toolsqa.pom.WebDriverFactory;
 import org.example.toolsqa.pom.subpage.elements.ElementsPage;
+import org.example.toolsqa.pom.subpage.elements.TextBoxPage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
+import org.w3c.dom.Text;
 
 public class SubpageTest {
 
@@ -66,7 +68,6 @@ public class SubpageTest {
     @Test
     @DisplayName("Book store press")
     void bookStorePress() {
-        //demoqa.com/elements starts off with elements header already selected -> cannot click forms header
         elementsPage.clickElementsHeader();
         elementsPage.clickBookStoreHeader();
 
@@ -75,9 +76,8 @@ public class SubpageTest {
     @Test
     @DisplayName("Text box subsection")
     void textBoxSubsection() {
-        //demoqa.com/elements starts off with elements header already selected -> cannot click forms header
-        elementsPage.clickTextBox();
-
+        TextBoxPage textBoxPage = elementsPage.clickTextBox();
+        textBoxPage.enterFullNameField("Ed Sheeran");
     }
 
 

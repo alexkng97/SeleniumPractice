@@ -1,6 +1,7 @@
 package org.example.toolsqa.pom.subpage;
 
 import org.example.toolsqa.pom.Page;
+import org.example.toolsqa.pom.subpage.elements.TextBoxPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -71,8 +72,9 @@ public abstract class Subpage extends Page {
         return webDriver.findElement(textBox);
     }
 
-    public void clickTextBox(){
+    public TextBoxPage clickTextBox(){
         getTextBox().click();
+        return new TextBoxPage(webDriver);
     }
 
 }
