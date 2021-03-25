@@ -79,6 +79,10 @@ public class SubpageTest {
         TextBoxPage textBoxPage = elementsPage.clickTextBox();
         textBoxPage.enterFullName("Ed Sheeran");
         textBoxPage.enterEmail("test@test.org");
+        textBoxPage.enterCurrentAddress("21 current address\nLondon");
+        textBoxPage.enterPermanentAddress("89 permanent address\nParis");
+
+        textBoxPage.clickSubmit();
     }
 
 

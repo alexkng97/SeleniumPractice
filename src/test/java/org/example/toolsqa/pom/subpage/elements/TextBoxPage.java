@@ -8,8 +8,9 @@ import org.openqa.selenium.WebElement;
 public class TextBoxPage extends Subpage {
     By fullName = By.id("userName");
     By email = By.id("userEmail");
-
-
+    By currentAddress = By.id("currentAddress");
+    By permanentAddress = By.id("permanentAddress");
+    By submit = By.id("submit");
 
     public TextBoxPage(WebDriver webDriver){
         super(webDriver);
@@ -29,5 +30,29 @@ public class TextBoxPage extends Subpage {
 
     public void enterEmail(String text){
         getEmail().sendKeys(text);
+    }
+
+    public WebElement getCurrentAddress(){
+        return webDriver.findElement(currentAddress);
+    }
+
+    public void enterCurrentAddress(String text){
+        getCurrentAddress().sendKeys(text);
+    }
+
+    public WebElement getPermanentAddress() {
+        return webDriver.findElement(permanentAddress);
+    }
+
+    public void enterPermanentAddress(String text){
+        getPermanentAddress().sendKeys(text);
+    }
+
+    public WebElement getSubmit() {
+        return webDriver.findElement(submit);
+    }
+
+    public void clickSubmit(){
+        getSubmit().click();
     }
 }
