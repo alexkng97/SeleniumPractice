@@ -77,7 +77,8 @@ public class SubpageTest {
     @DisplayName("Text box subsection")
     void textBoxSubsection() {
         TextBoxPage textBoxPage = elementsPage.clickTextBox();
-        textBoxPage.enterFullNameField("Ed Sheeran");
+        textBoxPage.enterFullName("Ed Sheeran");
+        textBoxPage.enterEmail("test@test.org");
     }
 
 

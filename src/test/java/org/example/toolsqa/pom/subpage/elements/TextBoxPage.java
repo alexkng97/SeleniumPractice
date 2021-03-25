@@ -6,18 +6,28 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class TextBoxPage extends Subpage {
-    By fullNameField = By.id("userName");
+    By fullName = By.id("userName");
+    By email = By.id("userEmail");
+
 
 
     public TextBoxPage(WebDriver webDriver){
         super(webDriver);
     }
 
-    public WebElement getFullNameField() {
-        return webDriver.findElement(fullNameField);
+    public WebElement getFullName() {
+        return webDriver.findElement(fullName);
     }
 
-    public void enterFullNameField(String text){
-        getFullNameField().sendKeys(text);
+    public void enterFullName(String text){
+        getFullName().sendKeys(text);
+    }
+
+    public WebElement getEmail() {
+        return webDriver.findElement(email);
+    }
+
+    public void enterEmail(String text){
+        getEmail().sendKeys(text);
     }
 }
