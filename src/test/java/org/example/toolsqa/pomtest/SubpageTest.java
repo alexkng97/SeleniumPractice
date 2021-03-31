@@ -1,6 +1,7 @@
 package org.example.toolsqa.pomtest;
 
 import org.example.toolsqa.pom.WebDriverFactory;
+import org.example.toolsqa.pom.subpage.elements.CheckBoxPage;
 import org.example.toolsqa.pom.subpage.elements.ElementsPage;
 import org.example.toolsqa.pom.subpage.elements.TextBoxPage;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,7 +17,7 @@ public class SubpageTest {
 
     @BeforeEach
     void setup(){
-        webDriver = WebDriverFactory.getWebDriver("firefox", false);
+        webDriver = WebDriverFactory.getWebDriver("chrome", false);
         elementsPage = new ElementsPage(webDriver);
         webDriver.get("https://demoqa.com/elements");
 
@@ -85,6 +86,13 @@ public class SubpageTest {
         textBoxPage.clickSubmit();
     }
 
+    @Test
+    @DisplayName("Check box subsection")
+    void checkBoxSubsection() {
+        CheckBoxPage checkBoxPage = elementsPage.clickCheckBox();
+        checkBoxPage.clickExpandAll();
+
+    }
 
 
 

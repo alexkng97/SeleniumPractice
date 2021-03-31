@@ -1,6 +1,7 @@
 package org.example.toolsqa.pom.subpage;
 
 import org.example.toolsqa.pom.Page;
+import org.example.toolsqa.pom.subpage.elements.CheckBoxPage;
 import org.example.toolsqa.pom.subpage.elements.TextBoxPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,6 +16,7 @@ public abstract class Subpage extends Page {
     By bookStoreHeader = By.cssSelector(".element-group:nth-child(6) .header-wrapper");
 
     By textBox = By.id("item-0");
+    By checkBox = By.id("item-1");
 
     public Subpage(WebDriver webDriver) {
         super(webDriver);
@@ -75,6 +77,15 @@ public abstract class Subpage extends Page {
     public TextBoxPage clickTextBox(){
         getTextBox().click();
         return new TextBoxPage(webDriver);
+    }
+
+    public WebElement getCheckBox(){
+        return webDriver.findElement(checkBox);
+    }
+
+    public CheckBoxPage clickCheckBox(){
+        getCheckBox().click();
+        return new CheckBoxPage(webDriver);
     }
 
 }
