@@ -91,6 +91,7 @@ public class SubpageTest {
     void checkBoxSubsection() {
         CheckBoxPage checkBoxPage = elementsPage.clickCheckBox();
         checkBoxPage.clickExpandAll();
+        checkBoxPage.clickCollapseAll();
 
     }
 
